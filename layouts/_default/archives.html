@@ -1,0 +1,18 @@
+{{ define "main" }}
+<main class="content" role="main">
+    <h1>{{ .Title }}</h1>
+    <div class="inner">
+        {{ range (.Site.RegularPages.GroupByDate "2006") }}
+            <h2>{{ .Key }}</h2>
+
+            <ul class="patterns-list" id="list">
+                {{ range (where .Pages "Type" "post") }}
+                    <li>
+                        <h4><a href="{{ .RelPermalink }}">{{ .PublishDate.Format "01-02" }} : {{ .Title }}</a></h4>
+                    </li>
+                {{ end }}
+            </ul>
+        {{ end }}
+    </div>
+</main>
+{{ end }}
