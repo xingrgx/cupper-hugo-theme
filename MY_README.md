@@ -12,7 +12,7 @@ hugo new _index.md
 hugo new about.md
 ```
 
-（二）新增 `archives` 页面
+（三）新增 `archives` 页面
 
 1. 创建 `archives` 页面
 
@@ -74,4 +74,20 @@ menu:
 </main>
 {{ end }}
 ```
-   
+
+（四）增加 Katex 的行内公式功能
+
+在 `themes\cupper-hugo-theme\layouts\partials\katex.html` 中添加以下内容：
+
+```javascript
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
+```
