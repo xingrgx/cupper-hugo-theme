@@ -12,7 +12,7 @@
   <ul class="patterns-list" id="list">
     {{ range .Pages.ByPublishDate.Reverse }}
     <li>
-      <h2>
+      <h4>
         <a href="{{ .RelPermalink }}">
           <svg
             class="bookmark"
@@ -24,7 +24,7 @@
           </svg>
           {{ .Title }}
         </a>
-      </h2>
+      </h4>
     </li>
     {{ end }}
   </ul>
