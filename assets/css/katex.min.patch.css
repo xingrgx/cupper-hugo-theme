@@ -1,0 +1,6 @@
+.katex-display {
+    display: block;
+    margin: 1em 0;
+    text-align: center;
+    overflow-x:auto;
+  }
