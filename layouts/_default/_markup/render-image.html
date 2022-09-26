@@ -1,0 +1,6 @@
+<figure role="group">
+        <a href="{{ .Destination | safeURL }}" class="img-link">
+            <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+        </a>
+        <figcaption>{{ .Text }}</figcaption>
+</figure>
